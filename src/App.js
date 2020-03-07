@@ -7,7 +7,8 @@ import History from './pages/about/History'
 import Press from './pages/about/Press'
 import Sponsors from './pages/about/Sponsors'
 import Team from './pages/about/Team'
-import Navbar from './components/Navbar'
+import Header from './components/Header'
+import Footer from './components/Footer'
 
 const links = [
   {
@@ -44,9 +45,7 @@ function App() {
   return (
     <Router>
       <div>
-        <header>
-          <Navbar links={links} />
-        </header>
+        <Header links={links} />
 
         <main>
           <Switch>
@@ -74,7 +73,7 @@ function App() {
           </Switch>
         </main>
 
-        <footer>Footer</footer>
+        <Footer />
       </div>
     </Router>
   )
