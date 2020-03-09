@@ -9,6 +9,15 @@ The goal of this excercise is not to create a perfect clone of the original webs
 
 **Powered by** <img src="https://reactjs.org/favicon.ico" alt="https://reactjs.org/favicon.ico" height="25" class="transparent"> <img src="https://material-ui.com/static/favicon.ico" alt="https://material-ui.com/static/favicon.ico" height="25" class="transparent">
 
+### Opportunities for improvement
+
+* Accessibility: The current implementation does not take accessibility seriously, failing to add ARIA attributes where needed.
+* Asset optimization: E.g. original images are unnecessarily large for web consumption.
+* Browser compatibility: The site works as intented on Chrome out of the box, but it may not be the case on other browsers.
+* Implementing the rest of the site: Obviously.
+* Refactoring: Data can be stored separately, variables can be better renamed, components can be broken down into smaller ones, styles can be better structured, etc.
+* Tests: No test is written for the app at the moment.
+
 ## License
 
 [MIT](./LICENSE)
