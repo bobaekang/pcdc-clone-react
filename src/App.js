@@ -9,6 +9,7 @@ import Sponsors from './pages/about/Sponsors'
 import Team from './pages/about/Team'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import MainLayout from './components/MainLayout'
 
 const links = [
   {
@@ -41,40 +42,79 @@ const links = [
   },
 ]
 
+const pages = [
+  {
+    component: <Team />,
+    path: '/team',
+    tagline: {
+      background: 'grey',
+      text: 'Team',
+    },
+  },
+  {
+    component: <History />,
+    path: '/history',
+    tagline: {
+      background: 'grey',
+      text: 'History',
+    },
+  },
+  {
+    component: <Sponsors />,
+    path: '/sponsors',
+    tagline: {
+      background: 'grey',
+      text: 'Sponsors',
+    },
+  },
+  {
+    component: <Press />,
+    path: '/press',
+    tagline: {
+      background: 'grey',
+      text: 'Press',
+    },
+  },
+  {
+    component: <Careers />,
+    path: '/careers',
+    tagline: {
+      background: 'grey',
+      text: 'Careers',
+    },
+  },
+  {
+    component: <Contact />,
+    path: '/contact',
+    tagline: {
+      background: 'grey',
+      text: 'Contact',
+    },
+  },
+  {
+    component: <Home />,
+    path: '/',
+    tagline: {
+      background: `url("https://commons.cri.uchicago.edu/wp-content/uploads/2019/05/global-connections-1.jpg")`,
+      text: 'Connect. Share. Cure.',
+    },
+  },
+]
+
 function App() {
   return (
     <Router>
-      <div>
-        <Header links={links} />
+      <Header links={links} />
 
-        <main>
-          <Switch>
-            <Route path="/team">
-              <Team />
-            </Route>
-            <Route path="/history">
-              <History />
-            </Route>
-            <Route path="/sponsors">
-              <Sponsors />
-            </Route>
-            <Route path="/press">
-              <Press />
-            </Route>
-            <Route path="/careers">
-              <Careers />
-            </Route>
-            <Route path="/contact">
-              <Contact />
-            </Route>
-            <Route path="/">
-              <Home />
-            </Route>
-          </Switch>
-        </main>
+      <Switch>
+        {pages.map(({ component, path, tagline }, i) => (
+          <Route key={i} path={path}>
+            <MainLayout tagline={tagline}>{component}</MainLayout>
+          </Route>
+        ))}
+      </Switch>
 
-        <Footer />
-      </div>
+      <Footer />
     </Router>
   )
 }
