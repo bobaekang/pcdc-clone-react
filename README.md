@@ -15,7 +15,9 @@ The goal of this excercise is not to create a perfect clone of the original webs
 * Asset optimization: E.g. original images are unnecessarily large for web consumption.
 * Browser compatibility: The site works as intented on Chrome out of the box, but it may not be the case on other browsers.
 * Implementing the rest of the site: Obviously.
+* Handling user input: Mock server response for forms, etc.
 * Refactoring: Data can be stored separately, variables can be better renamed, components can be broken down into smaller ones, styles can be better structured, etc.
+* SEO: Provide appropriate `<meta>` tags using `react-helmet`, etc.
 * Tests: No test is written for the app at the moment.
 
 ## License
