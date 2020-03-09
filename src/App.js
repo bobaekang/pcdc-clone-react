@@ -5,7 +5,6 @@ import Contact from './pages/about/Contact'
 import Careers from './pages/about/Careers'
 import History from './pages/about/History'
 import Press from './pages/about/Press'
-import Sponsors from './pages/about/Sponsors'
 import Team from './pages/about/Team'
 import Header from './components/Header'
 import Footer from './components/Footer'
@@ -23,10 +22,6 @@ const links = [
   {
     path: '/history',
     name: 'Our history',
-  },
-  {
-    path: '/sponsors',
-    name: 'Sponsors',
   },
   {
     path: '/press',
@@ -57,14 +52,6 @@ const pages = [
     tagline: {
       background: 'grey',
       text: 'History',
-    },
-  },
-  {
-    component: <Sponsors />,
-    path: '/sponsors',
-    tagline: {
-      background: 'grey',
-      text: 'Sponsors',
     },
   },
   {
