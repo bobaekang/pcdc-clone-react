@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Pediatric Cancer Data Commons (clone)",
+  "name": "Pediatric Cancer Data Commons clone using React.js",
   "icons": [
     {
       "src": "favicon.ico",
